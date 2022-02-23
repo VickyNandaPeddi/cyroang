@@ -1,0 +1,118 @@
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.slider-main {
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.slider {
+  width: 650px;
+  height: 350px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+
+/*.jas-carousel > .jas-item {*/
+/*  position: absolute !important;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*  transform-style: preserve-3d;*/
+/*}*/
+
+/*.pointer {*/
+/*  cursor: pointer;*/
+/*}*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*.jas-control .next {*/
+/*  position: absolute;*/
+/*  right: -220px;*/
+/*  top: 50%;*/
+/*  margin-top: -37px;*/
+/*  color: #FFF;*/
+/*  opacity: 0.5;*/
+/*  background: #03174f;*/
+/*}*/
+
+/*.jas-carousel {*/
+/*  position: absolute !important;*/
+/*  transform-style: preserve-3d;*/
+/*  transition: all 0.5s;*/
+/*  -webkit-transition: all 0.5s;*/
+/*  -ms-transition: all 0.5s;*/
+/*  -moz-transition: all 0.5s;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.jas-carousel > .jas-item.active {*/
+/*  filter: unset;*/
+/*}*/
+
+/**, ::after, ::before {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*element.style {*/
+/*  transform: translateZ(-790px) rotateY(*/
+/*    -270deg*/
+/*  );*/
+/*  transition: all 800ms ease 0s;*/
+/*}*/
+
+
+/*.slider-main {*/
+/*  width: 100%;*/
+/*  position: relative;*/
+/*  transform-style: preserve-3d;*/
+/*  overflow: hidden;*/
+/*}*/
+
+@media (max-width: 991px) {
+  .hero-section {
+    height: auto;
+    padding-bottom: 100px;
+  }
+
+  .hero-section {
+    height: 410px;
+    background: url(/src/assets/images/hero-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 50px 15px;
+    padding-bottom: 150px;
+    box-sizing: content-box;
+    background-position: bottom;
+    width: 100%;
+  }
+
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .slider-main {
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  }
+}

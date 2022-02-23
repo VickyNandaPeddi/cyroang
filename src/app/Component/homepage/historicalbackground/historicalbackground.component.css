@@ -1,0 +1,14 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.bg {
+  /*background-image: url('../../../../assets/images/absbg.jpg');*/
+  background-repeat: no-repeat;
+
+
+}
+
+
