@@ -1,0 +1,5 @@
+input[type=text].invalid-textbox,
+select.invalid-textbox,
+input[type=password].invalid-textbox {
+  border-bottom: 2px solid #ed5558;
+}

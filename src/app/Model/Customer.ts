@@ -1,5 +1,6 @@
 export class Customer {
-  public name: string;
+  public customerid: number;
+  public customername: string;
   public designation: string;
   public address: string;
   public town: string;
@@ -15,8 +16,9 @@ export class Customer {
   public freetext: string;
 
 
-  constructor(name: string, designation: string, address: string, town: string, district: string, state: string, pin: string, phone: number, emailid: string, panno: string, applicationuse: string[], modelselection: string[], inforequired: string[], freetext: string) {
-    this.name = name;
+  constructor(customerid: number, customername: string, designation: string, address: string, town: string, district: string, state: string, pin: string, phone: number, emailid: string, panno: string, applicationuse: string[], modelselection: string[], inforequired: string[], freetext: string) {
+    this.customerid = customerid;
+    this.customername = customername;
     this.designation = designation;
     this.address = address;
     this.town = town;
