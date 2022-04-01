@@ -108,7 +108,7 @@ body {
   font-size: 1em;
   color: #080808;
   font-family: 'Conv_GothamBook', sans-serif;
-  padding-top: 148px
+  /* padding-top: 148px */
 }
 
 .img-left {
@@ -641,9 +641,9 @@ span#action {
   color: #f37022;
 }
 
-li.nav-item.dropdown.has-sub:hover > .subDropAlt:after {
-  /*color: #fff;*/
-}
+/* li.nav-item.dropdown.has-sub:hover > .subDropAlt:after {
+  /*color: #fff;
+} */
 
 .site-nav > ul > li > ul > li > ul, .site-nav > ul > li > ul > li > ul > li > ul {
   padding: 7px 0;
@@ -758,7 +758,7 @@ li.nav-item.dropdown.has-sub:hover > .subDropAlt:after {
   padding-bottom: 5px;
 }
 
-.site-header.fixed .site-nav > ul > li.mega-menu > ul {
+.site-header.fixed .site-nav > ul > li.mega-menu > ul { 
   top: 78px;
 }
 
@@ -1726,9 +1726,9 @@ body.navOpen {
   margin-bottom: 25px;
 }
 
-.content-section p, .inner-content p {
+/* .content-section p, .inner-content p { */
   /*        padding-bottom: 20px;*/
-}
+/* } */
 
 .content-section ul, .inner-content ul {
   margin-bottom: 25px;

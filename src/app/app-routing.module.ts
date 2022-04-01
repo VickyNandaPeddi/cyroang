@@ -13,7 +13,8 @@ import {ContentComponent} from "./Component/homepage/content/content.component";
 import {ContactdetailsComponent} from "./Component/homepage/contactdetails/contactdetails.component";
 import {CustomerregisterComponent} from "./Component/customerlogin/customerregister/customerregister.component";
 import {QueriesComponent} from "./Component/homepage/queries/queries.component";
-
+import { CreateorderComponent } from './Component/customerlogin/createorder/createorder.component';
+import { DashboardComponent } from './Component/employeehome/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: "", component: DefaultComponent
@@ -51,6 +52,8 @@ const routes: Routes = [
       },
       {
         path: "queries", component: QueriesComponent
+      }, {
+        path: "createOrder", component: CreateorderComponent, pathMatch: "full"
       }
       //, {
       //   path: "employee", component: EmployeeloginComponent, pathMatch: "full"
@@ -76,7 +79,10 @@ const routes: Routes = [
   }
   , {
     path: "customerregister", component: CustomerregisterComponent, pathMatch: "full"
+  }, {
+    path: "employeehome", component: DashboardComponent, pathMatch: "full"
   }
+  
 
  
 

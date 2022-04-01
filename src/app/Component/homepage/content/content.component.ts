@@ -65,7 +65,7 @@ export class ContentComponent implements OnInit {
     },
     speed: 800,
     loop: true,
-    effect: 'coverflow',
+    effect: 'slide',
     //slide , flip,cube
     grabCursor: true,
     flipEffect: {

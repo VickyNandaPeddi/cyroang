@@ -1,0 +1,40 @@
+.demo-wrap {
+    position: relative;
+    z-index: 1;
+}
+  
+.demo-wrap .demo-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: url("https://assets.digitalocean.com/labs/images/community_bg.png") center center; */
+    background-image: linear-gradient(to bottom,  #6e89d78c, #9eaacd8c),  
+    url("../../../../../assets/images/bg_6.png");
+    /* rgba(41, 27, 235, 0.52), rgba(248, 171, 28, 0.897) */
+    /* opacity: .7; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+  .demo-content
+  {
+    /* opacity: 1; */
+    background-image: url("../../../../../assets/images/test2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }  
+
+  .boldclass
+  {
+      font-size: medium;
+      font-weight: 1000;
+      color:black;
+  }

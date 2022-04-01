@@ -1,0 +1,175 @@
+<div class="demo-wrap">
+    <br>
+    <div class="demo-bg"></div>
+    <div class=" row ">
+
+
+        <div class="col-2"></div>
+        <div class="col-8 demo-content" style="align-content: center">
+            <div class="card demo-content" style="align-content: center">
+
+                <div class="card-title text-center" style="padding-top: 15px;">
+                    <h3><b>Create Order</b></h3>
+                </div>
+                <div class="card-text" style="padding: 20px;">
+                    <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit()">
+                        <div class=" row ">
+                            <div class="col-md-4 ">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="custName" formControlName = "custName">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" formControlName = "city">
+                            </div>
+                            <div class="col-4">
+                                <label for="address" class="form-label">State</label>
+                                <select class="form-control" id="state">
+                                    <option [ngValue]="null" disabled>Select State</option>
+                                    <option *ngFor="let state of mstStateDistrict" [ngValue]="state.state_code">
+                                        {{state.state_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class=" row ">
+
+                            <div class="col-md-4">
+                                <label for="town" class="form-label">Mobile</label>
+                                <input type="text" class="form-control" id="mobile">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="district" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">Product</label>
+                                <select class="form-control" id="product">
+                                    <option [ngValue]="null" disabled>Select Product</option>
+                                    <option *ngFor="let prod of mstProduct" [ngValue]="prod.prod_code">
+                                        {{prod.prod_desc}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="town" class="form-label">Model</label>
+                                <select class="form-control" id="model">
+                                    <option [ngValue]="null" disabled>Select Model</option>
+                                    <option *ngFor="let model of mstModel" [ngValue]="model.model_code">
+                                        {{model.model_desc}}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="district" class="form-label">Quantity</label>
+                                <input type="text" class="form-control" id="quantity">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">Remarks</label>
+                                <input type="text" class="form-control" id="remarks">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label">Bill To Address</label>
+                                <input type="text" class="form-control" id="bill_to_addr">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="mobileNo" class="form-label">Ship To Address</label>
+                                <input type="text" class="form-control" id="ship_to_addr">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="emailId" class="form-label">GST NO</label>
+                                <input type="email" class="form-control" id="gst_no">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label">GST Certificate</label>
+                                <input type="file" class="form-control" id="gst_certificate">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">PAN NO</label>
+                                <input type="text" class="form-control" id="pan_no">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Upload PAN card copy</label>
+                                <input type="file" class="form-control" id="pan_certificate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label">TAN NO</label>
+                                <input type="text" class="form-control" id="tan_no">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="mobileNo" class="form-label">Account Number</label>
+                                <input type="text" class="form-control" id="account_number">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="emailId" class="form-label">Payee Name</label>
+                                <input type="email" class="form-control" id="payee_name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label">IFSC Code</label>
+                                <input type="text" class="form-control" id="ifsc_code">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="mobileNo" class="form-label">Branch Code</label>
+                                <input type="text" class="form-control" id="branch_code">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="emailId" class="form-label">Upload Cancelled cheque</label>
+                                <input type="file" class="form-control" id="cancelled_cheque">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label">TCS Applicability</label>
+                                <select class="form-control" id="tcs_applicable">
+                                    <option [ngValue]="null" disabled>Select TCS Applicability</option>
+                                    <option *ngFor="let applicable of tcsApplicable" [ngValue]="applicable.type_code">
+                                        {{applicable.type_name}}</option>
+                                </select>
+                              
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <label for="mobileNo" class="form-label">TCS Declaration Form</label>
+                                <input type="file" class="form-control" id="tcs_declaration_form">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="emailId" class="form-label">Delivery Type</label>
+                                
+                                <select class="form-control" id="delivery_type">
+                                    <option [ngValue]="null" disabled>Select TCS Applicability</option>
+                                    <option *ngFor="let deli of deliveryDrops" [ngValue]="deli.type_code">
+                                        {{deli.type_name}}</option>
+                                </select>
+                              
+                            </div>
+                        </div><br>
+                        <div class="row"><div class="col-md-5"></div>
+                        <div class="col-md-2"><button class="form-control ">SAVE</button></div>
+<div class="col-md-5"></div>
+                        </div>
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<!-- <p-toast [style]="{marginTop: '80px'}" styleClass="custom-toast" key="vendor-admin" position="bottom-center">
+</p-toast> -->

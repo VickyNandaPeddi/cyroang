@@ -1,0 +1,37 @@
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-nav">
+        <a class=" btn btn-outline-success" (click)="getorderDetails()">Order Details
+        </a>&nbsp;&nbsp;
+        <!-- <a class=" btn btn-outline-ioc" >Detailed Audit Report</a>&nbsp;&nbsp; -->
+        <a class=" btn btn-outline-danger">Image Report</a>&nbsp;&nbsp;
+
+    </div>
+</div><br>
+
+<table class="table table-bordered">
+
+    <thead>
+        <td>Sl No</td>
+        <td>Customer Name</td>
+        <td>
+            City
+        </td><td>View Details</td>
+    </thead>
+
+    <tbody *ngIf="trnOrderDet.length>0">
+        <tr *ngFor="let orderDet of trnOrderDet; let i = index;" [formGroupName]="i">
+
+            <td>{{i + 1}}</td>
+            <td>{{orderDet.custName}}</td>
+
+            <td>{{orderDet.city}}</td><td><button>View Details</button></td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="trnOrderDet.length<=0">
+        <tr>
+
+            <td colspan="3">NO DATA</td>
+
+        </tr>
+    </tbody>
+</table>

@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {EmployeeloginComponent} from './Component/employeelogin/employeelogin.component';
 import {CustomerloginComponent} from './Component/customerlogin/customerlogin.component';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {DefaultComponent} from './Component/homepage/default/default.component';
 import {HistoricalbackgroundComponent} from './Component/homepage/historicalbackground/historicalbackground.component';
@@ -19,8 +19,19 @@ import {ContactdetailsComponent} from './Component/homepage/contactdetails/conta
 import {CustomerregisterComponent} from './Component/customerlogin/customerregister/customerregister.component';
 import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
 import {QueriesComponent} from './Component/homepage/queries/queries.component';
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+// @ts-ignore
+import {HttpClientModule} from '@angular/common/http';
+
+
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
+
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {CreateorderComponent} from './Component/customerlogin/createorder/createorder.component';
+import {DashboardComponent} from './Component/employeehome/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +49,16 @@ import {FormsModule} from "@angular/forms";
     ContactdetailsComponent,
     CustomerregisterComponent,
     QueriesComponent,
+
+    CreateorderComponent,
+       DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FlexLayoutModule, NgbModule, NgxUsefulSwiperModule, HttpClientModule, FormsModule],
+    AppRoutingModule, FlexLayoutModule,NgbModule,NgxUsefulSwiperModule, FormsModule,HttpClientModule, MessagesModule,
+    MessageModule,
+    ToastModule,	BrowserAnimationsModule, ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,30 @@
+export class TrnOrderDetails {
+    constructor(
+        public reqNo : number,
+        public custName : String,
+        public city : string,
+        public state : string,
+        public mobileNo : string,
+        public emailId : string,
+        public product : string,
+        public model : string,
+        public quantity : string,
+        public remarks : string,
+        public billToAddress : string,
+        public shipToAddress : string,
+        public gstNo : string,
+        public gstDoc : string,
+        public panNo : string,
+        public panDoc : string,
+        public tanNo : string,
+        public accountNo : string,
+        public payeeName : string,
+        public ifscCode : string,
+        public branchCode : string,
+        public cancelledCheque : string,
+        public tcsApplicable : string,
+        public tcsForm : string,
+        public deliveryType : string,
+        public createdOn : string
+    ) { }
+}

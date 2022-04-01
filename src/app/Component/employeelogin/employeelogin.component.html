@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+ <!doctype html>
+ <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -7,27 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EmployeeLogin</title>
   <link rel="stylesheet" href="/assets/css/login.css" type="text/css">
-</head>
-<body>
-<div class="body"></div>
-<div class="grad"></div>
-<div class="header">
+</head> -->
 
-</div>
-<br>
-<div class="login">
-  <div class="logo">
-    <a href="/"><img src="/assets/images/logo.gif" alt="Indian Oil Logo"></a>
-    <div class="search-click"><i class="fa fa-search" aria-hidden="true"></i></div>
-    <div class="mobClick">
-      <span></span>
-      <span></span>
-      <span></span>
+<body>
+  <form [formGroup]="myGroup" (ngSubmit)="onClickSubmit()">
+    <!-- <div class="body"></div> -->
+ <!-- <div class="grad"></div>  -->
+<!-- <div class="header">
+
+</div> -->
+    <br>
+    <div>
+      <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+          <a href="/"><img src="/assets/images/logo.gif" alt="Indian Oil Logo"></a><br><br>
+          <input type="text" class="form-control" name="empCode" formControlName="empCode"><br>
+          <input type="password" class="form-control" placeholder="password" name="password"
+            formControlName="password"><br>
+          <button class="form-control ">SAVE</button>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
     </div>
-  </div>
-  <input type="text" placeholder="username" name="user"><br>
-  <input type="password" placeholder="password" name="password"><br>
-  <input type="button" value="Login">
-</div>
+  </form>
 </body>
-</html>
+ </html> 
