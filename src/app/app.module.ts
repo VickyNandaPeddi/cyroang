@@ -6,8 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
+import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,8 +31,6 @@ import {
   RecognitionsApprovalsComponent,
 } from './Component/homepage/recognitions-approvals/recognitions-approvals.component';
 import { TechnicalcapabilitesComponent } from './Component/homepage/technicalcapabilites/technicalcapabilites.component';
-
-// @ts-ignore
 
 @NgModule({
   declarations: [
@@ -66,6 +66,8 @@ import { TechnicalcapabilitesComponent } from './Component/homepage/technicalcap
     ToastModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    TableModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

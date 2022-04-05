@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import {customer} from "../../../model/customer";
+
+import { customer } from '../../../model/customer';
+
 @Component({
-  selector: 'app-customerlogin',
-  templateUrl: './customerlogin.component.html',
-  styleUrls: ['./customerlogin.component.css']
+  selector: "app-customerlogin",
+  templateUrl: "./customerlogin.component.html",
+  styleUrls: ["./customerlogin.component.css"],
 })
 export class CustomerloginComponent implements OnInit {
-
-
-  public customer:customer | undefined;
+  public customer: customer | undefined;
   submitted = false;
   // @ts-ignore
   id: number;
   message: string = "";
   validationon: string = "true";
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.customer = new customer();
-
   }
-
 }

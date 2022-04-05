@@ -1,8 +1,8 @@
-<div class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <div class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="navbar-nav">
         <a class=" btn btn-outline-success" (click)="getorderDetails()">Order Details
         </a>&nbsp;&nbsp;
-        <!-- <a class=" btn btn-outline-ioc" >Detailed Audit Report</a>&nbsp;&nbsp; -->
+         <a class=" btn btn-outline-ioc" >Detailed Audit Report</a>&nbsp;&nbsp; 
         <a class=" btn btn-outline-danger">Image Report</a>&nbsp;&nbsp;
 
     </div>
@@ -34,4 +34,40 @@
 
         </tr>
     </tbody>
-</table>
+</table> -->
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-nav">
+        <a class=" btn btn-outline-success" (click)="getorderDetails()">Order Details
+        </a>&nbsp;&nbsp;
+        <a class=" btn btn-outline-ioc">Detailed Audit Report</a>&nbsp;&nbsp;
+        <a class=" btn btn-outline-danger">Image Report</a>&nbsp;&nbsp;
+
+    </div>
+</div><br>
+<div class="card">
+
+    <p-table [value]="trnOrderDet" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        responsiveLayout="scroll" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Ref No</th>
+                <th>Custname</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Created On</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-trndet>
+            <tr>
+                <td>{{trndet.reqNo}}</td>
+                <td>{{trndet.custName}}</td>
+                <td>{{trndet.city}}</td>
+                <td>{{trndet.state}}</td>
+                <td>{{trndet.createdOn}}</td>
+            </tr>
+        </ng-template>
+
+
+    </p-table>
+</div>
