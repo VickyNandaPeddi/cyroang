@@ -1,0 +1,212 @@
+<div class="container">
+    <div class="card">
+
+        <div class="card-header text-center">Order Detail</div>
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col">
+                    Customer Name
+                </div>
+                <div class="col">
+                    <span> &#58; {{orderdetails.custName }}</span>
+                </div>
+                <div class="col">
+
+                    City
+                </div>
+                <div class="col">
+                    <span>&#58; {{orderdetails.city}}</span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    State
+                </div>
+                <div class="col">
+                    <span>&#58; {{orderdetails.state}} </span>
+                </div>
+
+                <div class="col">
+                    Mobile No
+                </div>
+                <div class="col">
+                    <span>&#58; {{orderdetails.mobile}} </span>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    Email ID
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.email}} </span>
+                </div>
+
+                <div class="col">
+                    Product
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.product}} </span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    Model
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.model}} </span>
+                </div>
+
+                <div class="col">
+                    Quantity
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.quantity}} </span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    Remarks
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.remarks}} </span>
+                </div>
+
+                <div class="col">
+                    Bill to Address
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.billtoaddr}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Ship to Address
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.shiptoaddr}} </span>
+                </div>
+
+                <div class="col">
+                    Gst No
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.gstno}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Pan No
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.panno}} </span>
+                </div>
+
+                <div class="col">
+                    Tan no
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.tanno}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Account Number
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.accountnumber}} </span>
+                </div>
+
+                <div class="col">
+                    Payee Name
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.payeename}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Ifsc Code
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.ifsccode}} </span>
+                </div>
+
+                <div class="col">
+                    Branch Code
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.branchcode}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    TCS Applicability
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.tcsapplicable}} </span>
+                </div>
+
+                <div class="col">
+                    Deliver Type
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.deliverytype}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Created
+                    On
+                    <b>(dd/mm/yy)</b>
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.createdOn | date: 'dd/MM/yyyy'}} </span>
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- | date: 'dd/MM/yyyy' -->

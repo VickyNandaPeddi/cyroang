@@ -56,6 +56,7 @@
                 <th>City</th>
                 <th>State</th>
                 <th>Created On</th>
+                <th>Action</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-trndet>
@@ -64,7 +65,8 @@
                 <td>{{trndet.custName}}</td>
                 <td>{{trndet.city}}</td>
                 <td>{{trndet.state}}</td>
-                <td>{{trndet.createdOn}}</td>
+                <td>{{trndet.createdOn| date: 'dd/MM/yyyy'}}</td>
+                <td><a routerLink="/trndet/{{trndet.reqNo}}" class="btn btn-primary">View Details</a></td>
             </tr>
         </ng-template>
 

@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TrnOrderDetails } from 'src/app/Model/TrnOrderDetails';
 import { environment } from 'src/environments/environment';
+import {CustomerserviceService} from "../../../service/customerservice.service";
 
 @Component({
   selector: "app-dashboard",
@@ -10,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DashboardComponent implements OnInit {
   trnOrderDet: TrnOrderDetails[];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private customerservice:CustomerserviceService) {}
 
   ngOnInit(): void {}
 
@@ -19,7 +20,14 @@ export class DashboardComponent implements OnInit {
       "Content-Type": "application/json;charset=UTF-8",
     }),
   };
+  getoneOrderDetail(){
+      this.customerservice.getOneOrderdetail(42).subscribe(data=>{
+          // @ts-ignore
+          console.log(data)
+      })
+  }
   getorderDetails() {
+      this.getoneOrderDetail()
     // this.messageService.add({ key: 'audit-pdf-toast', severity: 'warning', summary: 'Info', detail: 'Report generation may take time, Report will open in new tab automatically...' });
     // this.dataProviderService.getPdf('summary-report', this.currentAudit).subscribe((response) => {
     // let file = new Blob([response], { type: 'application/pdf' });

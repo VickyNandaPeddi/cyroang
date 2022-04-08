@@ -27,4 +27,10 @@ export class CustomerserviceService {
       { responseType: "json" }
     );
   }
+  getOneOrderdetail(reqno: any): Observable<any> {
+    return this.http.get(
+      environment.backEndUrl + "/UnregCust/order-list/" + reqno,
+      { responseType: "json" }
+    );
+  }
 }

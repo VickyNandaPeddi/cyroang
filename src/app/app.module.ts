@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
 import { TableModule } from 'primeng/table';
+import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { CreateorderComponent } from './Component/customerlogin/createorder/crea
 import { CustomerloginComponent } from './Component/customerlogin/customerlogin.component';
 import { CustomerregisterComponent } from './Component/customerlogin/customerregister/customerregister.component';
 import { DashboardComponent } from './Component/employeehome/dashboard/dashboard.component';
+import { OrderdataComponent } from './Component/employeehome/orderdata/orderdata.component';
 import { EmployeeloginComponent } from './Component/employeelogin/employeelogin.component';
 import { ContactdetailsComponent } from './Component/homepage/contactdetails/contactdetails.component';
 import { ContentComponent } from './Component/homepage/content/content.component';
@@ -51,6 +53,7 @@ import { TechnicalcapabilitesComponent } from './Component/homepage/technicalcap
 
     CreateorderComponent,
     DashboardComponent,
+    OrderdataComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { TechnicalcapabilitesComponent } from './Component/homepage/technicalcap
     ReactiveFormsModule,
     TableModule,
     ButtonModule,
+    TabViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
