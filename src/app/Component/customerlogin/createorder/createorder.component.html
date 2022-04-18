@@ -9,10 +9,13 @@
             <div class="card demo-content" style="align-content: center">
 
                 <div class="card-title text-center" style="padding-top: 15px;">
-                    <h3><b>Create Order</b></h3>
+                    <h3 *ngIf="isAddMode"><b>Create Order</b></h3>
+                    <h3 *ngIf="!isAddMode"><b>Update Order</b></h3>
+
                 </div>
                 <div class="card-text" style="padding: 20px;">
                     <form [formGroup]="formdata" (ngSubmit)="onClickSubmit()">
+                        <input type="hidden" class="form-control" id="reqno" formControlName="reqNo">
                         <div class=" row ">
                             <div class="col-md-4 ">
                                 <label for="name" class="form-label">Name</label>
@@ -89,7 +92,8 @@
                             <div class="col-md-4">
                                 <label for="pin" class="form-label">GST Certificate</label>
                                 <input type="file" class="form-control" id="gstcertificate"
-                                    formControlName="gstcertificate">
+
+                                       formControlName="gstcertificate">
                             </div>
                             <div class="col-md-4">
                                 <label for="" class="form-label">PAN NO</label>
@@ -98,7 +102,7 @@
                             <div class="col-md-4">
                                 <label for="" class="form-label">Upload PAN card copy</label>
                                 <input type="file" class="form-control" id="pancertificate"
-                                    formControlName="pancertificate">
+                                       formControlName="pancertificate">
                             </div>
                         </div>
                         <div class="row">
@@ -109,7 +113,7 @@
                             <div class="col-md-4">
                                 <label for="mobileNo" class="form-label">Account Number</label>
                                 <input type="text" class="form-control" id="accountnumber" name="accountnumber"
-                                    formControlName="accountnumber">
+                                       formControlName="accountnumber">
                             </div>
                             <div class="col-md-4">
                                 <label for="emailId" class="form-label">Payee Name</label>
@@ -128,7 +132,7 @@
                             <div class="col-md-4">
                                 <label for="emailId" class="form-label">Upload Cancelled cheque</label>
                                 <input type="file" class="form-control" id="cancelledcheque"
-                                    formControlName="cancelledcheque">
+                                       formControlName="cancelledcheque">
                             </div>
                         </div>
                         <div class="row">
@@ -145,7 +149,7 @@
                             <div class="col-md-4">
                                 <label for="mobileNo" class="form-label">TCS Declaration Form</label>
                                 <input type="file" class="form-control" id="tcsdeclarationform"
-                                    formControlName="tcsdeclarationform">
+                                       formControlName="tcsdeclarationform">
                             </div>
                             <div class="col-md-4">
                                 <label for="emailId" class="form-label">Delivery Type</label>
@@ -157,14 +161,15 @@
                                 </select>
 
                             </div>
-                        </div><br>
+                        </div>
+                        <br>
                         <div class="row">
                             <div class="col-md-5"></div>
-                            <div class="col-md-2"><button class="form-control ">SAVE</button></div>
+                            <div class="col-md-2">
+                                <button class="form-control ">SAVE</button>
+                            </div>
                             <div class="col-md-5"></div>
                         </div>
-
-
 
 
                     </form>
@@ -177,5 +182,6 @@
     </div>
 
 </div>
+
 <!-- <p-toast [style]="{marginTop: '80px'}" styleClass="custom-toast" key="vendor-admin" position="bottom-center">
 </p-toast> -->
