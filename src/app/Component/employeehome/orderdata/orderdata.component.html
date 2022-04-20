@@ -1,11 +1,12 @@
+<br><br><br><br>
 <div class="container">
 
     <div class="card">
 
         <div class="card-header text-center">
 
-            <h4 style="padding-left: 12cm">Order Detail <span style="padding-left: 12cm"><a
-                    class="btn btn-dark" routerLink="/update/{{orderdetails.reqNo}}" class="btn btn-primary">Update</a>    </span>
+            <h4 style="padding-left: 12cm">Order Detail <span style="padding-left: 12cm"><a class="btn btn-dark"
+                        routerLink="/update/{{orderdetails.reqNo}}" class="btn btn-primary">Update</a> </span>
             </h4>
 
         </div>
@@ -201,6 +202,25 @@
 
                 <div class="col">
                     <span> &#58; {{orderdetails.createdOn | date: 'dd/MM/yyyy'}} </span>
+                </div>
+
+                <div class="col">
+                    Base Price
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.baseprice}} </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    Expected Delivery Date
+                    <b>(dd/mm/yy)</b>
+                </div>
+
+                <div class="col">
+                    <span> &#58; {{orderdetails.expectedeliverydate | date: 'dd/MM/yyyy'}} </span>
                 </div>
 
                 <div class="col">
